@@ -38,4 +38,8 @@ public interface InterfaceInfoService extends IService<InterfaceInfo> {
 
     List<InterfaceInfoVo> interfaceAddBatch(long count);
 
+    Boolean interfaceIsExist(String url, Integer method);
+
+    InterfaceInfoVo interfaceSelectOne(String url, Integer method);
+
 }
