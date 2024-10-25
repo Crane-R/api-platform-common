@@ -2,6 +2,7 @@ package com.crane.apiplatformcommon.service;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.crane.apiplatformcommon.constant.InterfaceInfoStatus;
 import com.crane.apiplatformcommon.model.domain.InterfaceInfo;
 import com.crane.apiplatformcommon.model.dto.InterfaceAddRequest;
 import com.crane.apiplatformcommon.model.dto.InterfaceSelectRequest;
@@ -41,5 +42,17 @@ public interface InterfaceInfoService extends IService<InterfaceInfo> {
     Boolean interfaceIsExist(String url, Integer method);
 
     InterfaceInfoVo interfaceSelectOne(String url, Integer method);
+
+    /**
+     * 获取接口状态
+     *
+     * @author CraneResigned
+     * @date 2024/10/25 15:30
+     **/
+    InterfaceInfoStatus getStatus(Long interfaceId);
+
+    InterfaceInfo vo2Info(InterfaceInfoVo interfaceInfoVo);
+
+    InterfaceInfoVo info2Vo(InterfaceInfo interfaceInfo);
 
 }

@@ -59,6 +59,14 @@ public interface UserService extends IService<User> {
      * @date 2024/10/24 20:29
      **/
     UserVo getUserByAccessKey(String accessKey);
-    
+
+    /**
+     * 退出登录
+     *
+     * @author CraneResigned
+     * @date 2024/10/25 13:15
+     **/
+    Boolean logout(HttpServletRequest request);
+
 
 }

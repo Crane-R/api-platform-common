@@ -2,6 +2,8 @@ package com.crane.apiplatformcommon.model.vo;
 
 import lombok.Data;
 
+import java.io.Serial;
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -11,8 +13,10 @@ import java.util.Date;
  * @Author Crane Resigned
  */
 @Data
-public class UserInterfaceInfoVo {
+public class UserInterfaceInfoVo implements Serializable {
 
+    @Serial
+    private static final long serialVersionUID = -4040455837082929551L;
     private Long id;
 
     private Long userId;

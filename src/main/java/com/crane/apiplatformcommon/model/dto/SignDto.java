@@ -2,6 +2,9 @@ package com.crane.apiplatformcommon.model.dto;
 
 import lombok.Data;
 
+import java.io.Serial;
+import java.io.Serializable;
+
 /**
  * 签名dto
  *
@@ -9,7 +12,7 @@ import lombok.Data;
  * @Author Crane Resigned
  */
 @Data
-public class SignDto {
+public class SignDto implements Serializable {
 
     private String accessKey;
 
@@ -18,5 +21,8 @@ public class SignDto {
     private String nonce;
 
     private Object data;
+
+    @Serial
+    private static final long serialVersionUID = 1L;
 
 }
